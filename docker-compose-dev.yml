@@ -1,17 +1,17 @@
 version: '3.5'
 services:
-  Boilerplate-angular-aws-amplify-terraform:
-    container_name: Boilerplate-angular-aws-amplify-terraform
+  boilerplate-angular-aws-amplify-terraform:
+    container_name: boilerplate-angular-aws-amplify-terraform
     build:
       context: .
       dockerfile: Dockerfile.dev
     volumes:
       - .:/app
-      - Boilerplate-angular-aws-amplify-terraform-volume:/app/node_modules
+      - boilerplate-angular-aws-amplify-terraform-volume:/app/node_modules
     ports:
       - 4200:4200
     stdin_open: true
     tty: true
 
 volumes:
-  Boilerplate-angular-aws-amplify-terraform-volume:
+  boilerplate-angular-aws-amplify-terraform-volume:
