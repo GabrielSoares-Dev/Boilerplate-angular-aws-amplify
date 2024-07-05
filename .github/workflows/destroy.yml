@@ -1,10 +1,10 @@
-name: DEPLOY - DEV
+name: DESTROY - DEV
 on:
   workflow_dispatch:
 jobs:
   aws_amplify:
-    name: deploy
-    uses: GabrielSoares-Dev/workflows/.github/workflows/angular-aws-amplify-deploy.yml@master
+    name: destroy
+    uses: GabrielSoares-Dev/workflows/.github/workflows/terraform-destroy.yml@master
     with:
       work_dir: ./terraform
       environment: dev
