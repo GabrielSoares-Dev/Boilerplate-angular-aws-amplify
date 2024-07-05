@@ -4,7 +4,7 @@ on:
 jobs:
   aws_amplify:
     name: destroy
-    uses: GabrielSoares-Dev/workflows/.github/workflows/terraform-destroy.yml@master
+    uses: GabrielSoares-Dev/workflows/.github/workflows/angular-aws-amplify-destroy.yml@master
     with:
       work_dir: ./terraform
       environment: dev
