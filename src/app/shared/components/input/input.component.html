@@ -1,6 +1,6 @@
 <div class="container-input">
   <div>
-    <label for="test" class="text-sm font-medium text-gray-700 mb-1 block">{{
+    <label [for]="id" class="text-sm font-medium text-gray-700 mb-1 block">{{
       label
     }}</label>
     <input
@@ -15,9 +15,12 @@
       (keyup)="onKeyup()"
       (keydown)="onKeydown()"
       (input)="onInput()"
-      [class.input-has-error]="hasError" />
+      [class.input-has-error]="hasError"
+      [mask]="mask" />
   </div>
-  <div *ngIf="hasError" class="input-container-error-message">
-    <p class="input-error-message">{{ errorMessage }}</p>
-  </div>
+  @if (hasError) {
+    <div class="input-container-error-message">
+      <p class="input-error-message">{{ errorMessage }}</p>
+    </div>
+  }
 </div>
